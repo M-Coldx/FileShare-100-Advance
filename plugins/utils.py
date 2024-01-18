@@ -12,7 +12,8 @@ from config import (
     CHANNEL_ID,
     DB_URI,
     FORCE_MSG,
-    FORCE_SUB_CHANNEL,
+    FORCE_SUB_CHANNEL1,
+    FORCE_SUB_CHANNEL2,
     FORCE_SUB_GROUP,
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
@@ -56,7 +57,8 @@ ADMINS = <code>{ADMINS}</code>
     
 <u><b>CUSTOM VARS</b></u>
 CHANNEL_ID = <code>{CHANNEL_ID}</code>
-FORCE_SUB_CHANNEL = <code>{FORCE_SUB_CHANNEL}</code>
+FORCE_SUB_CHANNEL1 = <code>{FORCE_SUB_CHANNEL1}</code>
+FORCE_SUB_CHANNEL2 = <code>{FORCE_SUB_CHANNEL2}</code>
 FORCE_SUB_GROUP = <code>{FORCE_SUB_GROUP}</code>
 PROTECT_CONTENT = <code>{PROTECT_CONTENT}</code>
 START_MSG = <code>{START_MSG}</code>
