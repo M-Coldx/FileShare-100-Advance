@@ -67,7 +67,7 @@ def fsub_button(client, message):
     if FORCE_SUB_CHANNEL1 and not FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="ᴄʜ sᴄғ", url=client.invitelink),
+                InlineKeyboardButton(text="ᴄʜ ᴘʀᴄ", url=client.invitelink),
             ],
         ]
         try:
@@ -85,7 +85,7 @@ def fsub_button(client, message):
     if not FORCE_SUB_CHANNEL1 and FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="ɢᴄ sᴄғ", url=client.invitelink2),
+                InlineKeyboardButton(text="ᴄʜ sʀᴀ", url=client.invitelink2),
             ],
         ]
         try:
@@ -103,7 +103,7 @@ def fsub_button(client, message):
     if not FORCE_SUB_CHANNEL1 and not FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="ɢᴄ ᴛ-ʜᴏɴᴇ", url=client.invitelink3),
+                InlineKeyboardButton(text="ɢᴄ ɴs", url=client.invitelink3),
             ],
         ]
         try:
@@ -121,9 +121,9 @@ def fsub_button(client, message):
     if FORCE_SUB_CHANNEL1 and FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="ᴄʜ sᴄғ", url=client.invitelink),
-                InlineKeyboardButton(text="ɢᴄ sᴄғ", url=client.invitelink2),
-                InlineKeyboardButton(text="ɢᴄ ᴛ-ʜᴏɴᴇ", url=client.invitelink3),
+                InlineKeyboardButton(text="ᴄʜ ᴘʀᴄ", url=client.invitelink),
+                InlineKeyboardButton(text="ᴄʜ sʀᴀ", url=client.invitelink2),
+                InlineKeyboardButton(text="ɢᴄ ɴs", url=client.invitelink3),
             ],
         ]
         try:
