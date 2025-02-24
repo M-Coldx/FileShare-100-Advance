@@ -33,9 +33,9 @@ class Bot(Client):
         )
         self.LOGGER = LOGGER
 
-    async def start(self):
+    async def start(self, *args, **kwargs):
         try:
-            await super().start()
+            await super().start(*args, **kwargs)
             usr_bot_me = await self.get_me()
             self.username = usr_bot_me.username
             self.namebot = usr_bot_me.first_name
