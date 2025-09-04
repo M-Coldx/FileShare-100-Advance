@@ -1,25 +1,30 @@
 {
-  "name": "File Sharing Man",
-  "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
+  "name": "File Sharing Man v4",
+  "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus dengan fitur yang telah diperbaiki",
   "stack": "heroku-24",
   "keywords": [
     "telegram",
     "file",
-    "sharing"
+    "sharing",
+    "pyrogram",
+    "force-subscribe"
   ],
   "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Masukan Bot token, Dapatkan dari t.me/BotFather",
-      "value": ""
+      "value": "",
+      "required": true
     },
     "OWNER": {
       "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
-      "value": ""
+      "value": "",
+      "required": true
     },
     "ADMINS": {
       "description": "Masukan User ID untuk mendapatkan hak Admin di BOT [ Gunakan Spasi Untuk Pemisah User ID ]",
-      "value": "0"
+      "value": "",
+      "required": true
     },
     "APP_ID": {
       "description": "Dapatkan APP ID di web my.telegram.org",
@@ -27,22 +32,29 @@
     },
     "API_HASH": {
       "description": "Dapatkan API HASH di web my.telegram.org",
-      "value": "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+      "value": "",
+      "required": true
     },
     "CHANNEL_ID": {
-      "description": "Masukan ID Channel Untuk [Channel Database]",
-      "value": "-100"
+      "description": "Masukan ID Channel Untuk [Channel Database] (contoh: -1001234567890)",
+      "value": "",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Database URL dari PostgreSQL addon Heroku",
+      "value": "",
+      "required": false
     },
     "PROTECT_CONTENT": {
       "description": "Untuk Mencegah pengguna bot untuk mendownload/memforward/mengscreenshot konten yang dikirim di bot [ Bila ingin diaktifkan ubah ke True ]",
       "value": "False"
     },
     "FORCE_SUB_CHANNEL1": {
-      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "description": "Masukan ID dari Channel Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
       "value": "0"
     },
     "FORCE_SUB_CHANNEL2": {
-      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "description": "Masukan ID dari Channel Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
       "value": "0"
     },
     "FORCE_SUB_GROUP": {
@@ -51,16 +63,33 @@
     },
     "START_MESSAGE": {
       "description": "Pesan /start memulai awalan ke bot, Gunakan format parsemode HTML",
-      "value": "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
+      "value": "<b>Hello {first}\\n\\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
-      "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
+      "value": "<b>Hello {first}\\n\\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\\n\\nSilakan Join Ke Channel Terlebih Dahulu</b>"
+    },
+    "CUSTOM_CAPTION": {
+      "description": "Custom caption untuk file yang dibagikan (opsional)",
+      "value": "",
+      "required": false
+    },
+    "DISABLE_CHANNEL_BUTTON": {
+      "description": "Set True untuk menonaktifkan tombol share di channel",
+      "value": "False"
+    },
+    "MAX_FILE_SIZE": {
+      "description": "Maksimal ukuran file dalam bytes (default: 50MB)",
+      "value": "52428800"
+    },
+    "MESSAGE_DELAY": {
+      "description": "Delay antara pengiriman pesan dalam detik (default: 0.5)",
+      "value": "0.5"
     }
   },
   "addons": [
     {
-    "plan": "heroku-postgresql",
+      "plan": "heroku-postgresql",
       "options": {
         "version": "14"
       }
